@@ -121,3 +121,68 @@ body {
 .year {
   margin-left: 8px;
 }
+
+.dot-menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  color: #efefef;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.dot-menu-selection {
+  z-index: 999;
+  list-style: none;
+  background-color: #353e54;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.5);
+}
+
+.dot-menu-option {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.clock-format-text {
+  color: #efefef;
+  font-size: 0.9em;
+  margin-right: 20px;
+}
+
+.format-switch-btn {
+  width: 35px;
+  height: 15px;
+  background: #485470;
+  border-radius: 75px;
+  box-shadow: inset 2px 2px 4px rgba(255, 255, 255, 0.1),
+    inset -2px -2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-self: center;
+}
+
+.format-switch-btn:before {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  margin-top: 1px;
+  background: #ff5e9a;
+  border-radius: 50%;
+  box-shadow: 0 5px 20px #ff5e9a;
+  transform: translateX(-10px);
+  transition: 0.25s ease-in-out;
+  transition-property: background, transform;
+}
+
+.format-switch-btn.active:before {
+  background: #0bff8d;
+  box-shadow: 0 5px 20px #0bff8d;
+  transform: translateX(10px);
+}

@@ -12,7 +12,10 @@ function clock() {
   }
 
   // Set the 12-hour clock format
-  hours = hours > 12 ? hours % 12 : hours;
+  let formatValue = formatSwitchBtn.getAttribute("data-format");
+  if (formatValue === "12") {
+    hours = hours > 12 ? hours % 12 : hours;
+  }
 
   // Add 0 for the values lower than 10
   if (hours < 10) {
@@ -60,3 +63,18 @@ document.querySelector(".month-name").innerHTML = months[monthNumber];
 document.querySelector(".day-name").innerHTML = weekdays[dayNumber];
 document.querySelector(".day-number").innerHTML = dayOfMonth;
 document.querySelector(".year").innerHTML = year;
+
+// Switch clock format
+const formatSwitchBtn = document.querySelector(".format-switch-btn");
+
+formatSwitchBtn.addEventListener("click", () => {
+  formatSwitchBtn.classList.toggle("active");
+
+  let formatValue = formatSwitchBtn.getAttribute("data-format");
+
+  if (formatValue === "12") {
+    formatSwitchBtn.setAttribute("data-format", "24");
+  } else {
+    formatSwitchBtn.setAttribute("data-format", "12");
+  }
+});
