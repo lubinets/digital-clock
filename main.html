@@ -13,11 +13,15 @@
   </head>
   <body>
     <div class="digital-clock">
-      <i class="uis uis-ellipsis-v dot-menu"></i>
-      <ul class="dot-menu-selection">
-        <li class="dot-menu-option">
-          <span class="clock-format-text">24-hour format</span>
-          <div class="format-switch-btn" data-format="12"></div>
+      <i class="uis uis-ellipsis-v dot-menu" id="active-menu"></i>
+      <ul class="dot-menu-selection" id="active-menu">
+        <li class="dot-menu-option" id="active-menu">
+          <span class="clock-format-text" id="active-menu">24-hour format</span>
+          <div
+            class="format-switch-btn"
+            data-format="12"
+            id="active-menu"
+          ></div>
         </li>
       </ul>
       <div class="time">

@@ -78,3 +78,17 @@ formatSwitchBtn.addEventListener("click", () => {
     formatSwitchBtn.setAttribute("data-format", "12");
   }
 });
+
+// Dot menu toggle
+const dotMenuBtn = document.querySelector(".dot-menu");
+const dotMenu = document.querySelector(".dot-menu-selection");
+
+dotMenuBtn.addEventListener("click", () => {
+  dotMenu.classList.toggle("active");
+});
+
+document.addEventListener("click", (e) => {
+  if (e.target.id !== "active-menu") {
+    dotMenu.classList.remove("active");
+  }
+});
